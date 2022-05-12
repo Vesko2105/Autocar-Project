@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;;
+}
+
+.banner{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.banner-element{
+    width: 20%;
+    min-height: 1200px;
+    background-size: 1200px;
+    background-position: -200px 0;
+    background-repeat: no-repeat;
+    transition: all ease-in 0.7s;
+}
+
+div.banner-element{
+    color: rgb(164, 173, 182);
+}
+
+.banner-element h1{
+    width: 60%;
+    margin: 20% 20% 3%;
+}
+
+.banner-element h1,
+.banner-element h4{
+    text-align: center;
+    text-transform: uppercase;
+    transition-delay: 1s;
+    opacity: 0;
+}
+
+.banner-element:hover{
+    width: 80%;
+    background-position: -100px 0;
+}
+
+.banner-element:hover h1, 
+.banner-element:hover h4{
+    opacity: 1;
+}
