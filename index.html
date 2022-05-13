@@ -1,37 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0e21636753.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="banner">
-        <div style="background-image: url(images/img-2.jpg);" class="banner-element" id="1">
+    <!---------------- Contact Section ---------------->
+
+    <ul id="help">
+        <li id="phone">
+            <a href=""><i class="fa-solid fa-phone help-icons"></i>Need Support? 1-8X0-666-8X88</a>
+        </li>
+        <li id="email">
+            <a href=""><i class="fa-solid fa-envelope help-icons"></i>support@autocar.com</a>
+        </li>
+        <li id="login">
+            <a href=""><i class="fa-solid fa-right-to-bracket help-icons"></i>Login</a>
+        </li>
+        <li id="register">
+            <a href=""><i class="fa-solid fa-user help-icons"></i>Register</a>
+        </li>
+    </ul>
+
+    <!---------------- Navigation ---------------->
+
+    <div id="navbar">
+        <h1 id="nav-logo">Autocar</h1>
+        <ul id="navigation">
+            <li>Home</li>
+            <li>Car Listing</li>
+            <li>Pages</li>
+            <li>Blog</li>
+            <li>Shop</li>
+            <li>Contact</li>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        </ul>
+    </div>
+
+    <!---------------- Banner ---------------->
+
+    <div id="banner">
+        <div onclick="banner(this)" style="background-image: url(images/img-2.jpg);" class="banner-elem">
             <h1>This is the first car box</h1>
-            <h4>This is some information for the first car</h4>
+            <h3>This is some information for the first car</h3>
+            <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
+                    id="arrow"></i></button>
         </div>
-        <div style="background-image: url(images/img-3.jpg)" class="banner-element">
+
+        <div onclick="banner(this)" style="background-image: url(images/img-3.jpg)" class="banner-elem">
             <h1>This is the second car box</h1>
-            <h4>This is some information for the second car</h4>
+            <h3>This is some information for the second car</h3>
+            <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
+                    id="arrow"></i></button>
         </div>
-        <div style="background-image: url(images/img-4.jpg)" class="banner-element">
-            <h1>This is the third car box</h1>
-            <h4>This is some information for the third car</h4>
 
+        <div onclick="banner(this)" style="background-image: url(images/img-4.jpg)" class="banner-elem" id="active-b">
+            <h1>Welcome to autocar</h1>
+            <h3>The best place to find your dream car</h3>
+            <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
+                    id="arrow"></i></button>
         </div>
-        <div style="background-image: url(images/img-5.jpg)" class="banner-element">
+
+        <div onclick="banner(this)" style="background-image: url(images/img-5.jpg)" class="banner-elem">
             <h1>This is the fourth car box</h1>
-            <h4>This is some information for the fourth car</h4>
-
+            <h3>This is some information for the fourth car</h3>
+            <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
+                    id="arrow"></i></button>
         </div>
-        <div style="background-image: url(images/img-7.jpg)" class="banner-element">
-            <h1>This is the fifth car box</h1>
-            <h4>This is some information for the fifth car</h4>
 
+        <div onclick="banner(this)" style="background-image: url(images/img-7.jpg)" class="banner-elem">
+            <h1>This is the fifth car box</h1>
+            <h3>This is some information for the fifth car</h3>
+            <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
+                    id="arrow"></i></button>
         </div>
     </div>
+
+    <!---------------- Featured Section ---------------->
+    
+    <section id="featured">
+        
+        <h1>Featured</h1>
+
+        <li id="categ-bar">
+            <ul onclick="search(this)" class="categ-btn" id="active-s"><p class="categ-btn-txt">All</p></ul>
+            <ul onclick="search(this)" class="categ-btn"><p class="categ-btn-txt">Red</p></ul>
+            <ul onclick="search(this)" class="categ-btn"><p class="categ-btn-txt">Blue</p></ul>
+            <ul onclick="search(this)" class="categ-btn"><p class="categ-btn-txt">Silver</p></ul>
+        </li>
+
+    </section>
+
+
+
+
+
+
+    <script>
+        function banner(element) {
+            var active = document.getElementById("active-b");
+            active.id = "";
+            element.id = "active-b";
+        }
+
+        function search(element) {
+            var active = document.getElementById("active-s");
+            active.id = "";
+            element.id = "active-s";
+        }
+    </script>
 </body>
 </html>
