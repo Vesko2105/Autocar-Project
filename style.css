@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Muli', sans-serif;
     text-align: center;
+    box-sizing: border-box;
 }
 
 body{
@@ -59,6 +60,7 @@ body{
     position: sticky;
     top: 0;
     left: 0;
+    background-color: white;
 }
 
 #navigation{
@@ -88,6 +90,7 @@ body{
 #banner{
     display: flex;
     flex-wrap: nowrap;
+    min-height: 80vh;
 }
 
 #banner h1{
@@ -95,12 +98,12 @@ body{
 }
 
 .banner-elem{
-    width: 20%;
-    min-height: 700px;
+    width: 10vw;
+    background-origin: border-box;
     background-size: cover;
     background-repeat: no-repeat;
     transition-property: width, background-position;
-    transition-duration: 1s;
+    transition-duration: 0.6s;
 }
 
 .banner-elem h1{
@@ -127,20 +130,20 @@ body{
 
 .banner-elem#active-b{
     background-position: -150px 0;
-    width: 80%;
+    width: 60vw;
 }
 
 .banner-elem#active-b h1,
 .banner-elem#active-b h3{
 transition-property: opacity 0.3s;
-transition-delay: 0.7s;
+transition-delay: 0.4s;
 opacity: 100%;
 }
 
 .banner-elem#active-b .banner-btn{
     transition-property: background-color, opacity;
     transition-duration: 0.5s, 0.3s;
-    transition-delay: 0s, 0.7s;
+    transition-delay: 0s, 0.4s;
     opacity: 100%;
 }
 
@@ -154,7 +157,7 @@ opacity: 100%;
     cursor: pointer;
 
     width: 20%;
-    margin: 5% 40%;
+    margin: 5% auto 0;
     padding: 1.5% 0;
     position: relative;
     
