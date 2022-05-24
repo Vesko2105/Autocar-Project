@@ -52,35 +52,35 @@
     <!---------------- Banner ---------------->
 
     <div id="banner">
-        <div onclick="banner(this)" style="background-image: url(images/img-2.jpg);" class="banner-elem">
+        <div onclick="activate(this, 'active-b')" style="background-image: url(images/banner/banner-car-1.jpg);" class="banner-elem">
             <h1>This is the first car box</h1>
             <h3>This is some information for the first car</h3>
             <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
                     id="arrow"></i></button>
         </div>
 
-        <div onclick="banner(this)" style="background-image: url(images/img-3.jpg)" class="banner-elem">
+        <div onclick="activate(this, 'active-b')" style="background-image: url(images/banner/banner-car-2.jpg)" class="banner-elem">
             <h1>This is the second car box</h1>
             <h3>This is some information for the second car</h3>
             <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
                     id="arrow"></i></button>
         </div>
 
-        <div onclick="banner(this)" style="background-image: url(images/img-4.jpg)" class="banner-elem" id="active-b">
+        <div onclick="activate(this, 'active-b')" style="background-image: url(images/banner/banner-car-3.jpg)" class="banner-elem" id="active-b">
             <h1>Welcome to autocar</h1>
             <h3>The best place to find your dream car</h3>
             <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
                     id="arrow"></i></button>
         </div>
 
-        <div onclick="banner(this)" style="background-image: url(images/img-5.jpg)" class="banner-elem">
+        <div onclick="activate(this, 'active-b')" style="background-image: url(images/banner/banner-car-4.jpg)" class="banner-elem">
             <h1>This is the fourth car box</h1>
             <h3>This is some information for the fourth car</h3>
             <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
                     id="arrow"></i></button>
         </div>
 
-        <div onclick="banner(this)" style="background-image: url(images/img-7.jpg)" class="banner-elem">
+        <div onclick="activate(this, 'active-b')" style="background-image: url(images/banner/banner-car-5.jpg)" class="banner-elem">
             <h1>This is the fifth car box</h1>
             <h3>This is some information for the fifth car</h3>
             <button class="banner-btn"><span class="btn-txt">Read More</span><i class="fa-solid fa-arrow-right-long"
@@ -94,25 +94,152 @@
         
         <h1>Featured</h1>
 
-        <li id="categ-bar">
-            <ul onclick="search(this)" class="categ-btn" id="active-s"><p class="categ-btn-txt">All</p></ul>
-            <ul onclick="search(this)" class="categ-btn"><p class="categ-btn-txt">Red</p></ul>
-            <ul onclick="search(this)" class="categ-btn"><p class="categ-btn-txt">Blue</p></ul>
-            <ul onclick="search(this)" class="categ-btn"><p class="categ-btn-txt">Silver</p></ul>
-        </li>
+        <ul id="categ-bar">
+            <li onclick="activate(this, 'active-s'), filter('featured-image')" class="categ-btn" id="active-s"><p class="categ-btn-txt">All</p></li>
+            <li onclick="activate(this, 'active-s'), filter('red')" class="categ-btn"><p class="categ-btn-txt">Red</p></li>
+            <li onclick="activate(this, 'active-s'), filter('grey')" class="categ-btn"><p class="categ-btn-txt">Blue</p></li>
+            <li onclick="activate(this, 'active-s'), filter('blue')" class="categ-btn"><p class="categ-btn-txt">Silver</p></li>
+        </ul>
+
+        <div class="container-featured">
+            <div class="featured-image red active-f" style="background-image: url(images/featured/featured-car-1.jpg)">
+                <div class="featured-sign">
+                    <p>Featured</p>
+                </div>
+                <div class="featured-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-road"></i>
+                        <p>4000 km</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-image grey active-f" style="background-image: url(images/featured/featured-car-2.jpg)">
+                <div class="featured-sign">
+                    <p>Featured</p>
+                </div>
+                <div class="featured-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-road"></i>
+                        <p>4000 km</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-image blue active-f" style="background-image: url(images/featured/featured-car-3.jpg)">
+                <div class="featured-sign">
+                    <p>Featured</p>
+                </div>
+                <div class="featured-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-road"></i>
+                        <p>4000 km</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-image blue active-f" style="background-image: url(images/featured/featured-car-4.jpg)">
+                <div class="featured-sign">
+                    <p>Featured</p>
+                </div>
+                <div class="featured-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-road"></i>
+                        <p>4000 km</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-image red active-f" style="background-image: url(images/featured/featured-car-5.jpg)">
+                <div class="featured-sign">
+                    <p>Featured</p>
+                </div>
+                <div class="featured-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-road"></i>
+                        <p>4000 km</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-image grey active-f" style="background-image: url(images/featured/featured-car-6.jpg)">
+                <div class="featured-sign">
+                    <p>Featured</p>
+                </div>
+                <div class="featured-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-road"></i>
+                        <p>4000 km</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>2020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Manual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
     <script>
-        function banner(element) {
-            var active = document.getElementById("active-b");
+        function activate(element, id) {
+            var active = document.getElementById(id);
             active.id = "";
-            element.id = "active-b";
+            element.id = id;
         }
 
-        function search(element) {
-            var active = document.getElementById("active-s");
-            active.id = "";
-            element.id = "active-s";
+        function filter(category){
+            let featuredCars = document.getElementsByClassName("featured-image");
+            for(let i = 0; i<featuredCars.length; i++){
+                let car = featuredCars[i];
+                if(car.classList.contains(category))
+                    car.classList.add("active-f");
+                else
+                    car.classList.remove("active-f");
+            }
         }
     </script>
 </body>
