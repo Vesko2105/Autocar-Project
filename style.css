@@ -17,37 +17,26 @@ body{
     display: flex;
     align-items: center;
     background-color: hsl(279, 37%, 40%);
-    padding: 0.5%;
+    padding: 0.5% 3%;
     list-style-type: none;
 }
 
+.help-item{
+    margin: 0 1%;
+}
+
 #help a{
-    text-decoration: none;
     color: hsl(208, 75%, 92%);
+    text-decoration: none;
 }
 
-#phone{
-    width: 17%;
-    margin-left: 5%;
-}
-
-#email{
-    width: 12%;
-    margin-left: 2%;
+#help i{
+    position: relative;
+    right: 4%;
 }
 
 #login{
-    width: 4%;
-    margin-left: 50%;
-}
-
-#register{
-    width: 5%;
-    margin-left: 1%;
-}
-
-.help-icons{
-    margin-right: 3%;
+    margin-left: 60%;
 }
 
 /* ---------------- Navigation ---------------- */
@@ -61,16 +50,18 @@ body{
     top: 0;
     left: 0;
     background-color: white;
+    z-index: 1;
 }
 
 #navigation{
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 40%;
     font-size: 1rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
+    cursor: default;
 }
 
 #navigation li:hover{
@@ -78,8 +69,8 @@ body{
 }
 
 #navigation li:hover{
-    color: hsl(279, 40%, 70%);
     cursor: pointer;
+    color: hsl(279, 40%, 70%);
 }
 
 #nav-logo{
@@ -104,46 +95,31 @@ body{
     background-repeat: no-repeat;
     transition-property: width, background-position;
     transition-duration: 0.6s;
+    
+    color: hsl(208, 75%, 92%);
+}
+
+.banner-elem#active-b{
+    width: 60vw;
+    background-position-x: -150px;
 }
 
 .banner-elem h1{
     text-transform: uppercase;
-    color: hsl(208, 75%, 92%);
-    
-    margin: 25% 30% 3%;
-    
+    margin: 25% auto 3%; 
     opacity: 0%;
-    
-    transition: opacity 0.3s;
-    transition-delay: 0s;
 }
 
 .banner-elem h3{
-    color: hsl(208, 75%, 92%);
-    font-weight: 300;
-    
+    font-weight: 100;
     opacity: 0%;
-    
-    transition: opacity 0.3s;
-    transition-delay: 0s;
-}
-
-.banner-elem#active-b{
-    background-position: -150px 0;
-    width: 60vw;
 }
 
 .banner-elem#active-b h1,
-.banner-elem#active-b h3{
-transition-property: opacity 0.3s;
-transition-delay: 0.4s;
-opacity: 100%;
-}
-
+.banner-elem#active-b h3,
 .banner-elem#active-b .banner-btn{
-    transition-property: background-color, opacity;
-    transition-duration: 0.5s, 0.3s;
-    transition-delay: 0s, 0.4s;
+    transition-property: opacity;
+    transition-delay: 0.4s;
     opacity: 100%;
 }
 
@@ -156,15 +132,19 @@ opacity: 100%;
     border-radius: 0.5rem;
     cursor: pointer;
 
-    width: 20%;
+    width: 15%;
     margin: 5% auto 0;
     padding: 1.5% 0;
     position: relative;
     
     opacity: 0;
-    transition-property: background-color, opacity;
-    transition-duration: 0.5s, 0.3s;
-    transition-delay: 0s, 0s;
+    
+    transition-property: opacity, background-color;
+    transition-duration: 0.4s, 0.3s;
+}
+
+.banner-btn:hover{
+    background-color: hsla(0, 0%, 0%, 0);
 }
 
 #arrow{
@@ -179,10 +159,6 @@ opacity: 100%;
     position: relative;
     right: 0;
     transition: right 0.5s;
-}
-
-.banner-btn:hover{
-    background-color: hsla(279, 37%, 32%, 0);
 }
 
 .banner-btn:hover #arrow{
