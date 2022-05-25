@@ -230,7 +230,7 @@ body{
     margin: 0 auto;
 }
 
-.featured-image{
+.featured-item{
     display: none;
     width: 24vw;
     height: 15.5vw;
@@ -245,10 +245,10 @@ body{
     font-weight: 600;
 
     transition-property: bottom;
-    transition-duration: 0.6s;
+    transition-duration: 0.5s;
 }
 
-.featured-image:hover{
+.featured-item:hover{
     bottom: 0.5vh;
 }
 
@@ -282,7 +282,7 @@ body{
     top: 80%;
 
     transition-property: width, top, margin, color, background-color, border-radius;
-    transition-duration: 0.6s;
+    transition-duration: 0.5s;
 }
 
 .info-item{
@@ -295,7 +295,7 @@ body{
     margin-right: 5%;
 }
 
-.featured-image:hover .featured-info{
+.featured-item:hover .featured-info{
     top: 75%;
     width: 90%;
     margin: 0 5%;
@@ -304,7 +304,7 @@ body{
     border-radius: 0.3rem;
 }
 
-.featured-image:hover .featured-info p{
+.featured-item:hover .featured-info p{
     color: black;
 }
 

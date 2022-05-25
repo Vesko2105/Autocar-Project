@@ -95,14 +95,14 @@
         <h1>Featured</h1>
 
         <ul id="categ-bar">
-            <li onclick="activate(this, 'active-s'), filter('featured-image')" class="categ-btn" id="active-s"><p class="categ-btn-txt">All</p></li>
+            <li onclick="activate(this, 'active-s'), filter('featured-item')" class="categ-btn" id="active-s"><p class="categ-btn-txt">All</p></li>
             <li onclick="activate(this, 'active-s'), filter('red')" class="categ-btn"><p class="categ-btn-txt">Red</p></li>
             <li onclick="activate(this, 'active-s'), filter('blue')" class="categ-btn"><p class="categ-btn-txt">Blue</p></li>
             <li onclick="activate(this, 'active-s'), filter('grey')" class="categ-btn"><p class="categ-btn-txt">Silver</p></li>
         </ul>
 
         <div class="container-featured">
-            <div class="featured-image red active-f" style="background-image: url(images/featured/featured-car-1.jpg)">
+            <div class="featured-item red active-f" style="background-image: url(images/featured/featured-car-1.jpg)">
                 <div class="featured-sign">
                     <p>Featured</p>
                 </div>
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="featured-image grey active-f" style="background-image: url(images/featured/featured-car-2.jpg)">
+            <div class="featured-item grey active-f" style="background-image: url(images/featured/featured-car-2.jpg)">
                 <div class="featured-sign">
                     <p>Featured</p>
                 </div>
@@ -142,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="featured-image blue active-f" style="background-image: url(images/featured/featured-car-3.jpg)">
+            <div class="featured-item blue active-f" style="background-image: url(images/featured/featured-car-3.jpg)">
                 <div class="featured-sign">
                     <p>Featured</p>
                 </div>
@@ -162,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="featured-image blue active-f" style="background-image: url(images/featured/featured-car-4.jpg)">
+            <div class="featured-item blue active-f" style="background-image: url(images/featured/featured-car-4.jpg)">
                 <div class="featured-sign">
                     <p>Featured</p>
                 </div>
@@ -182,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="featured-image red active-f" style="background-image: url(images/featured/featured-car-5.jpg)">
+            <div class="featured-item red active-f" style="background-image: url(images/featured/featured-car-5.jpg)">
                 <div class="featured-sign">
                     <p>Featured</p>
                 </div>
@@ -202,7 +202,7 @@
                 </div>
             </div>
 
-            <div class="featured-image grey active-f" style="background-image: url(images/featured/featured-car-6.jpg)">
+            <div class="featured-item grey active-f" style="background-image: url(images/featured/featured-car-6.jpg)">
                 <div class="featured-sign">
                     <p>Featured</p>
                 </div>
@@ -232,7 +232,7 @@
         }
 
         function filter(category){
-            let featuredCars = document.getElementsByClassName("featured-image");
+            let featuredCars = document.getElementsByClassName("featured-item");
             for(let i = 0; i<featuredCars.length; i++){
                 let car = featuredCars[i];
                 if(car.classList.contains(category))
